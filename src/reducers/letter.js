@@ -1,6 +1,7 @@
 import { ADD_LETTER } from '../actions'
 
-  const words = ['duck', 'window', 'watermelon', 'around', 'scientist'];
+  const words = ['duck', 'window', 'watermelon', 'around', 'scientist', 'table', 'candle',
+    'bottle', 'beer', 'ignore', 'random', 'juicy', 'rhythm', 'vodka', 'zombie'];
   var result = ""
   const guesses = []
   var word = words[Math.floor(Math.random() * words.length)]
