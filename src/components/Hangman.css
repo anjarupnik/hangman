@@ -18,3 +18,9 @@ header {
   margin-top: -48px;
   border-radius: 20px;
   font-size: 18px; }
+
+.man {
+  height: 200px;
+  width: 200px;
+  margin-left: -400px;
+  margin-top: -150px; }

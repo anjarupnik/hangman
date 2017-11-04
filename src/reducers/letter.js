@@ -29,8 +29,8 @@ import { ADD_LETTER } from '../actions'
 
     function next(word, guesses) {
       if (wrongGuessCount(word, guesses) > 5)
-        return result = (word + "  Game over!!")
-      if (isWinner(word, guesses)) return result = "You won!!!!";
+        return result = "- " + word
+      if (isWinner(word, guesses)) return result = "You Won!!!!";
         result = showGuess(word, guesses);
     }
 
