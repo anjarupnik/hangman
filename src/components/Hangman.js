@@ -7,8 +7,10 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
 class Hangman extends PureComponent {
-
   render() {
+    function refreshPage(){
+    window.location.reload();
+}
 
     return (
       <div>
@@ -18,9 +20,11 @@ class Hangman extends PureComponent {
 
         <main>
          <h1 className="word">{ this.props.letter }</h1>
-
-          <StartButton />
+           <StartButton />
         </main>
+        <button onClick={refreshPage}>
+        new Game
+        </button>
       </div>
     )
   }

@@ -7,6 +7,7 @@ import AddLetter from './AddLetter'
 class StartButton extends PureComponent {
   render() {
       if (this.props.hide) { return <AddLetter /> }
+
     return (
       <button className="start" onClick= { this.props.addLetter }>
         Start
@@ -16,7 +17,7 @@ class StartButton extends PureComponent {
 }
 
 const mapStateToProps = ({ letter }) => ({
-  hide: letter.length > 0
+  hide: letter.length > 0,
 })
 
 export default connect((mapStateToProps), { addLetter })(StartButton)
