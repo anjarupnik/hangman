@@ -2,10 +2,14 @@ import React, { PureComponent } from 'react'
 import Title from './Title'
 import StartButton from './StartButton'
 import './Hangman.css'
-import Game from './Game'
+import AddLetter from './AddLetter'
 
 class Hangman extends PureComponent {
   render() {
+    var word = "hangman"
+    var letters = word.split("")
+    var dashes = letters.map(letter =>  "_ " )
+
     return (
       <div>
         <header>
@@ -13,7 +17,8 @@ class Hangman extends PureComponent {
         </header>
 
         <main>
-          <Game />
+          <h1>{[...dashes]}</h1>
+          <AddLetter />
         </main>
       </div>
     )

@@ -4,7 +4,7 @@ import './StartButton.css'
 class StartButton extends PureComponent {
   render() {
     return (
-      <button>
+      <button className="start">
         Start
       </button>
     )
