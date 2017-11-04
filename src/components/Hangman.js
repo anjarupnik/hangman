@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react'
 import Title from './Title'
 import StartButton from './StartButton'
 import './Hangman.css'
+import Game from './Game'
 
 class Hangman extends PureComponent {
   render() {
@@ -12,7 +13,7 @@ class Hangman extends PureComponent {
         </header>
 
         <main>
-          <StartButton />
+          <Game />
         </main>
       </div>
     )
