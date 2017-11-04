@@ -3,12 +3,12 @@ import Title from './Title'
 import StartButton from './StartButton'
 import './Hangman.css'
 import AddLetter from './AddLetter'
+import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 
 class Hangman extends PureComponent {
+
   render() {
-    var word = "hangman"
-    var letters = word.split("")
-    var dashes = letters.map(letter =>  "_ " )
 
     return (
       <div>
@@ -17,7 +17,7 @@ class Hangman extends PureComponent {
         </header>
 
         <main>
-          <h1>{[...dashes]}</h1>
+         { this.props.letter }
           <AddLetter />
         </main>
       </div>
@@ -25,4 +25,5 @@ class Hangman extends PureComponent {
   }
 }
 
-export default Hangman
+const mapStateToProps = ({ letter }) => ({ letter })
+export default connect(mapStateToProps)(Hangman)

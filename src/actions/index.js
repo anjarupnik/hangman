@@ -1,6 +1,6 @@
-export const addLetter = text => {
-  return {
-    type: 'ADD_LETTER',
-    text
-  }
-}
+export const ADD_LETTER = 'ADD_LETTER'
+
+export default (letter) => ({
+  type: ADD_LETTER,
+  payload: letter
+})

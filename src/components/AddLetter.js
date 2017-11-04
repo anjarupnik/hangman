@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { addLetter } from '../actions'
+import  addLetter  from '../actions'
 
 let AddLetter = ({ dispatch }) => {
   let input
@@ -30,6 +30,6 @@ let AddLetter = ({ dispatch }) => {
   )
 }
 
-AddLetter = connect()(AddLetter)
+const mapStateToProps = ({ letter }) => ({ letter})
 
-export default AddLetter
+export default connect(mapStateToProps)(AddLetter)
