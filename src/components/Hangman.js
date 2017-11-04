@@ -12,6 +12,7 @@ class Hangman extends PureComponent {
     window.location.reload();
 }
 
+
     return (
       <div>
         <header>
@@ -21,10 +22,12 @@ class Hangman extends PureComponent {
         <main>
          <h1 className="word">{ this.props.letter }</h1>
            <StartButton />
+           {this.props.letter.length > 10 &&
+             <button className="newgame" onClick={refreshPage}>
+             New Game
+             </button>
+   }
         </main>
-        <button onClick={refreshPage}>
-        new Game
-        </button>
       </div>
     )
   }

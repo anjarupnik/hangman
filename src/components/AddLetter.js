@@ -1,13 +1,15 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import  addLetter  from '../actions'
+import './AddLetter.css'
+
 
 let AddLetter = ({ dispatch }) => {
   let input
 
   return (
     <div>
-      <form
+      <form 
         onSubmit={e => {
           e.preventDefault()
           if (!input.value.trim()) {
