@@ -29,9 +29,9 @@ import { ADD_LETTER } from '../actions'
 
     function next(word, guesses) {
       if (wrongGuessCount(word, guesses) > 5)
-        return result = "- " + word
+        return result = word
       if (isWinner(word, guesses)) return result = "You Won!!!!";
-        result = showGuess(word, guesses);
+        result = showGuess(word, guesses) ;
     }
 
 export default (state = result, { type, payload } = {}) => {
@@ -39,7 +39,7 @@ export default (state = result, { type, payload } = {}) => {
       case ADD_LETTER :
       guesses.push(payload)
       next(word, guesses)
-      return [...result]
+      return [result, wrongGuessCount(word, guesses)]
 
     default :
       return state
