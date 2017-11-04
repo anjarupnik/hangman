@@ -17,8 +17,9 @@ class Hangman extends PureComponent {
         </header>
 
         <main>
-         { this.props.letter }
-          <AddLetter />
+         <h1 className="word">{ this.props.letter }</h1>
+
+          <StartButton />
         </main>
       </div>
     )
