@@ -4,7 +4,7 @@ import  addLetter  from '../actions'
 import { connect } from 'react-redux'
 import AddLetter from './AddLetter'
 
-class StartButton extends PureComponent {
+export class StartButton extends PureComponent {
   render() {
       if (this.props.hide) { return <AddLetter />}
 

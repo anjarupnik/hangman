@@ -24,12 +24,12 @@ import { ADD_LETTER } from '../actions'
     }
 
     function isWinner(word, guesses) {
-      var result = showGuess(word, guesses).replace(/ /g,'');
-      return result === word;
+      var winner = showGuess(word, guesses).replace(/ /g,'');
+      return winner === word;
     }
 
     function next(word, guesses) {
-      if (wrongGuessCount(word, guesses) === 5)
+      if (wrongGuessCount(word, guesses) === 6)
         return result = word
       if (isWinner(word, guesses)) return result = "You Won!!!!";
         result = showGuess(word, guesses) ;

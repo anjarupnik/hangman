@@ -10,4 +10,14 @@ describe('letter reducer', () => {
     expect(reducer()).to.eql(initialState)
   })
 
+  it('takes letter and give back array', () => {
+    const letter = "a"
+
+    const seedAction = {
+      type: ADD_LETTER,
+      payload: letter
+    }
+
+    expect(reducer(initialState, seedAction)).to.not.eql(letter)
+  })
 })

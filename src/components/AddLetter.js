@@ -9,7 +9,7 @@ let AddLetter = ({ dispatch }) => {
 
   return (
     <div>
-      <form 
+      <form
         onSubmit={e => {
           e.preventDefault()
           if (!input.value.trim()) {
@@ -18,7 +18,7 @@ let AddLetter = ({ dispatch }) => {
           dispatch(addLetter(input.value))
           input.value = ''
         }}
-      >
+        >
         <input
           ref={node => {
             input = node

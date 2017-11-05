@@ -9,7 +9,7 @@ import Man2 from '../images/man2.jpg'
 import Man3 from '../images/man3.jpg'
 import Man4 from '../images/man4.jpg'
 
-class Hangman extends PureComponent {
+export class Hangman extends PureComponent {
   render() {
     function refreshPage(){
     window.location.reload();
@@ -21,15 +21,15 @@ class Hangman extends PureComponent {
         </header>
 
         <main>
-          { this.props.letter[1] > 1  && this.props.letter[1] < 6 ?
+          { this.props.letter[1] > 1 && this.props.letter[0] !== "You Won!!!!" ?
             <img className="man1" alt="hangman" src={Man1} /> : null }
-          { this.props.letter[1] > 2  && this.props.letter[1] < 6 ?
+          { this.props.letter[1] > 2 && this.props.letter[0] !== "You Won!!!!" ?
             <img className="man2" alt="hangman" src={Man2} /> : null }
-          { this.props.letter[1] > 3  && this.props.letter[1] < 6 ?
+          { this.props.letter[1] > 3 && this.props.letter[0] !== "You Won!!!!" ?
             <img className="man3" alt="hangman" src={Man3} /> : null }
-          { this.props.letter[1] > 4  && this.props.letter[1] < 6 ?
+          { this.props.letter[1] > 4 && this.props.letter[0] !== "You Won!!!!" ?
             <img className="man4 "alt="hangman" src={Man4} /> : null }
-          { this.props.letter[1] === 5 && this.props.letter[1] < 6 ?
+          { this.props.letter[1] > 5 ?
             <img className="man" alt="hangman" src={Man} /> : null }
           <h1 className="word">{ this.props.letter[0] }</h1>
           <StartButton />
@@ -38,11 +38,12 @@ class Hangman extends PureComponent {
                 New Game
               </button>
             }
-          {this.props.letter[1] === 5 &&
+          {this.props.letter[1] > 5 &&
               <button className="newgame" onClick={refreshPage}>
                 New Game
               </button>
             }
+            {this.props.letter[1] > 6 ? refreshPage() : null  }
         </main>
       </div>
     )
